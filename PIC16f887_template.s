@@ -109,10 +109,10 @@ readadc0:
 	bcf STATUS,RPZERO
 	movlw 01000001B	    ;01XXX001, three blank bits tell ADCON0 which analog input to check
 	movwf ADCON0
-	bsf ADCON0,2	    ;start adc conversion
+	bsf ADCON0,1	    ;start adc conversion
 loopadc0:
 	clrwdt		    ;Pat the watchdog
-	btfsc ADCON0,2	    ;check if conversion finished
+	btfsc ADCON0,1	    ;check if conversion finished
 	goto loopadc0
 	movf ADRESH,w	    ;take result from ADRESH
 	movwf ADC0	    ;move result to ADC0
@@ -125,10 +125,10 @@ readadc1:
 	bcf STATUS,RPZERO
 	movlw 01001001B	    ;01XXX001, three blank bits tell ADCON0 which analog input to check 
 	movwf ADCON0
-	bsf ADCON0,2	    ;start adc conversion
+	bsf ADCON0,1	    ;start adc conversion
 loopadc1:
 	clrwdt		    ;Pat the watchdog
-	btfsc ADCON0,2	    ;check if conversion finished
+	btfsc ADCON0,1	    ;check if conversion finished
 	goto loopadc1
 	movf ADRESH,w
 	movwf ADC1
@@ -141,10 +141,10 @@ readadc2:
 	bcf STATUS,RPZERO
 	movlw 01010001B	    ;01XXX001, three blank bits tell ADCON0 which analog input to check 
 	movwf ADCON0
-	bsf ADCON0,2	    ;start adc conversion
+	bsf ADCON0,1	    ;start adc conversion
 loopadc2:
 	clrwdt		    ;Pat the watchdog
-	btfsc ADCON0,2	    ;check if conversion finished
+	btfsc ADCON0,1	    ;check if conversion finished
 	goto loopadc2
 	movf ADRESH,w
 	movwf ADC2

@@ -42,7 +42,7 @@ PROCESSOR 16F88 ;tell the software which chip is used. Datasheet: https://docs.r
 CONFIG  FOSC = INTOSCIO       ; Oscillator Selection bits (INTRC oscillator; port I/O function on both RA6/OSC2/CLKO pin and RA7/OSC1/CLKI pin)
 CONFIG  WDTE = OFF            ; Watchdog Timer Enable bit (WDT disabled)
 CONFIG  PWRTE = OFF           ; Power-up Timer Enable bit (PWRT disabled)
-CONFIG  MCLRE = ON            ; RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is MCLR)
+CONFIG  MCLRE = OFF            ; RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is Digital I/O)
 CONFIG  BOREN = ON            ; Brown-out Reset Enable bit (BOR enabled)
 CONFIG  LVP = ON              ; Low-Voltage Programming Enable bit (RB3/PGM pin has PGM function, Low-Voltage Programming enabled)
 CONFIG  CPD = OFF             ; Data EE Memory Code Protection bit (Code protection off)

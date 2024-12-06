@@ -8,7 +8,7 @@ PROCESSOR 16F887 ;Datasheet: https://ww1.microchip.com/downloads/en/devicedoc/41
   CONFIG  FOSC = INTRC_NOCLKOUT ; Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
   CONFIG  WDTE = OFF            ; Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
   CONFIG  PWRTE = OFF           ; Power-up Timer Enable bit (PWRT disabled)
-  CONFIG  MCLRE = ON            ; RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
+  CONFIG  MCLRE = OFF            ; RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
   CONFIG  CP = OFF              ; Code Protection bit (Program memory code protection is disabled)
   CONFIG  CPD = OFF             ; Data Code Protection bit (Data memory code protection is disabled)
   CONFIG  BOREN = ON            ; Brown Out Reset Selection bits (BOR enabled)
